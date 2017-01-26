@@ -12,6 +12,7 @@
 		405EB1871E3A675600F2643A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405EB1851E3A675600F2643A /* Main.storyboard */; };
 		405EB1891E3A675600F2643A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 405EB1881E3A675600F2643A /* Assets.xcassets */; };
 		405EB18C1E3A675600F2643A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405EB18A1E3A675600F2643A /* LaunchScreen.storyboard */; };
+		405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405EB1941E3A685A00F2643A /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		405EB1881E3A675600F2643A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		405EB18B1E3A675600F2643A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		405EB18D1E3A675600F2643A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		405EB1941E3A685A00F2643A /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		405EB1801E3A675600F2643A /* Good GO */ = {
 			isa = PBXGroup;
 			children = (
+				405EB1931E3A683800F2643A /* Data Modal */,
 				405EB1811E3A675600F2643A /* AppDelegate.swift */,
 				405EB1831E3A675600F2643A /* ViewController.swift */,
 				405EB1851E3A675600F2643A /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				405EB18D1E3A675600F2643A /* Info.plist */,
 			);
 			path = "Good GO";
+			sourceTree = "<group>";
+		};
+		405EB1931E3A683800F2643A /* Data Modal */ = {
+			isa = PBXGroup;
+			children = (
+				405EB1941E3A685A00F2643A /* WeatherData.swift */,
+			);
+			name = "Data Modal";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				405EB1841E3A675600F2643A /* ViewController.swift in Sources */,
+				405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */,
 				405EB1821E3A675600F2643A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
