@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import UserNotifications
 
 class TableViewController: UITableViewController, CLLocationManagerDelegate {
     
@@ -33,6 +34,12 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     
     
     //MARK: Private Methods
+    func setupNotificationSettings() {
+        //For notification
+        UNUserNotificationCenter.current().delegate = self
+        
+    }
+    
     func getUserCity() {
         // Ask for Authorisation from the User.
         locationManager.requestAlwaysAuthorization()
@@ -57,7 +64,7 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
                 if let content = data {
                     /////////////////////////////////////////////////////////////
                     
-                    //Tuan start here
+                    //TUAN START HERE
                     //Init data got to weatherData (override index weatherData[0]
                     
                     
@@ -240,3 +247,12 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     */
 
 }
+
+extension UITableViewController: UNUserNotificationCenterDelegate {
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        //Some other way of handing notification in app
+        completionHandler([.alert, .sound])
+    }
+}
+

@@ -14,6 +14,7 @@
 		405EB18C1E3A675600F2643A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405EB18A1E3A675600F2643A /* LaunchScreen.storyboard */; };
 		405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405EB1941E3A685A00F2643A /* WeatherData.swift */; };
 		407121A71E3B0E090011B6F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407121A61E3B0E090011B6F1 /* TableViewController.swift */; };
+		40CB11D61E3B5238003F9C03 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB11D51E3B5238003F9C03 /* Collection+SafeIndex.swift */; };
 		40E62B181E3B243A008955DF /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 40E62B171E3B243A008955DF /* Data.json */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +22,14 @@
 		2B11EFDC11F38125E3BD568B /* Pods-Good GO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Good GO.release.xcconfig"; path = "Pods/Target Support Files/Pods-Good GO/Pods-Good GO.release.xcconfig"; sourceTree = "<group>"; };
 		3064A5AB4C04D064B55848C6 /* Pods-Good GO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Good GO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Good GO/Pods-Good GO.debug.xcconfig"; sourceTree = "<group>"; };
 		405EB17E1E3A675600F2643A /* Good GO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good GO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		405EB1811E3A675600F2643A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		405EB1811E3A675600F2643A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		405EB1861E3A675600F2643A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		405EB1881E3A675600F2643A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		405EB18B1E3A675600F2643A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		405EB18D1E3A675600F2643A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		405EB1941E3A685A00F2643A /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		407121A61E3B0E090011B6F1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		40CB11D51E3B5238003F9C03 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		40E62B171E3B243A008955DF /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		4E7042B0598425FC0AAEBF5D /* Pods_Good_GO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Good_GO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 		405EB1801E3A675600F2643A /* Good GO */ = {
 			isa = PBXGroup;
 			children = (
+				40CB11D41E3B5214003F9C03 /* Extension */,
 				40E62B161E3B23E2008955DF /* Example Data */,
 				407121A81E3B0E160011B6F1 /* View Controllers */,
 				405EB1931E3A683800F2643A /* Data Modal */,
@@ -108,6 +111,14 @@
 				407121A61E3B0E090011B6F1 /* TableViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		40CB11D41E3B5214003F9C03 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40CB11D51E3B5238003F9C03 /* Collection+SafeIndex.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		40E62B161E3B23E2008955DF /* Example Data */ = {
@@ -155,6 +166,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = Z6SZFEQ64K;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -246,6 +262,7 @@
 				405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */,
 				407121A71E3B0E090011B6F1 /* TableViewController.swift in Sources */,
 				405EB1821E3A675600F2643A /* AppDelegate.swift in Sources */,
+				40CB11D61E3B5238003F9C03 /* Collection+SafeIndex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
