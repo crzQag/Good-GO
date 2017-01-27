@@ -1,26 +1,227 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SpN-7T-k5v">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--DỰ BÁO THỜI TIẾT-->
+        <scene sceneID="fQa-8g-x99">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="ilb-XH-j92" customClass="TableViewController" customModule="Good_GO" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="360" sectionHeaderHeight="18" sectionFooterHeight="18" id="vAF-lv-CXo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Vị Trí" id="RgC-SF-fX0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="Ams-UB-9KP">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ams-UB-9KP" id="rhv-Xc-Q1X">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố: Hà Nội" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDK-v5-w7d">
+                                                    <rect key="frame" x="16" y="12" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quốc gia: Vietnam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-vG-lMm">
+                                                    <rect key="frame" x="16" y="43" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vùng: Hanoi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6m-9c-hzL">
+                                                    <rect key="frame" x="16" y="74" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VeH-vG-lMm" secondAttribute="trailing" constant="8" id="15C-rv-e5N"/>
+                                                <constraint firstItem="BDK-v5-w7d" firstAttribute="leading" secondItem="rhv-Xc-Q1X" secondAttribute="leadingMargin" constant="8" id="3Jn-7o-aOT"/>
+                                                <constraint firstItem="D6m-9c-hzL" firstAttribute="leading" secondItem="rhv-Xc-Q1X" secondAttribute="leadingMargin" constant="8" id="48D-06-e6w"/>
+                                                <constraint firstItem="VeH-vG-lMm" firstAttribute="top" secondItem="BDK-v5-w7d" secondAttribute="bottom" constant="12" id="6Mc-j1-xA5"/>
+                                                <constraint firstItem="VeH-vG-lMm" firstAttribute="leading" secondItem="rhv-Xc-Q1X" secondAttribute="leadingMargin" constant="8" id="AUQ-19-uFQ"/>
+                                                <constraint firstItem="D6m-9c-hzL" firstAttribute="top" secondItem="VeH-vG-lMm" secondAttribute="bottom" constant="12" id="Nzz-wr-5uM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BDK-v5-w7d" secondAttribute="trailing" constant="8" id="ObY-A6-YGH"/>
+                                                <constraint firstItem="BDK-v5-w7d" firstAttribute="top" secondItem="rhv-Xc-Q1X" secondAttribute="top" constant="12" id="eB3-XQ-Cmm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="D6m-9c-hzL" secondAttribute="trailing" constant="8" id="uOM-ZO-Xsr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Hôm Nay" id="62I-pP-YPX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lrw-du-yKg">
+                                        <rect key="frame" x="0.0" y="219" width="375" height="360"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lrw-du-yKg" id="y4h-Hl-beu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPD-nH-pan">
+                                                    <rect key="frame" x="16" y="22" width="343" height="16.5"/>
+                                                    <string key="text">Cập nhật cuối: Fri, 27 Jan 2017 11:00 AM ICT
+</string>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiện tại: Mây mù" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-Rf-qCa">
+                                                    <rect key="frame" x="16" y="50" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Có mưa: Có" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-Sa-vSE">
+                                                    <rect key="frame" x="16" y="81" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bình mình: 6:35 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvN-5G-Lit">
+                                                    <rect key="frame" x="16" y="112" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVO-Wp-G5y" customClass="CircularSlider" customModule="CircularSlider">
+                                                    <rect key="frame" x="16" y="197" width="140" height="140"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="YVO-Wp-G5y" secondAttribute="height" multiplier="1:1" id="Kh5-fC-7Vs"/>
+                                                        <constraint firstAttribute="width" constant="140" id="kfz-Vm-HZg"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Độ Ẩm"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fractionDigits">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                            <real key="value" value="100"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radiansOffset">
+                                                            <real key="value" value="0.40000000000000002"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="divisa" value=" "/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="knobRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzq-h6-qvJ" customClass="CircularSlider" customModule="CircularSlider">
+                                                    <rect key="frame" x="189" y="167" width="170" height="170"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="170" id="L1r-bP-jx3"/>
+                                                        <constraint firstAttribute="width" secondItem="Gzq-h6-qvJ" secondAttribute="height" multiplier="1:1" id="QxY-1N-Kk6"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radiansOffset">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Nhiệt"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="divisa" value="°C"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fractionDigits">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                            <real key="value" value="58"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                            <real key="value" value="58"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="knobRadius">
+                                                            <real key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                            <real key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoàng hôn: 5:44 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAo-jl-uhx">
+                                                    <rect key="frame" x="16" y="143.5" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pAo-jl-uhx" secondAttribute="trailing" constant="8" id="2Xn-zX-AHH"/>
+                                                <constraint firstItem="dAK-Rf-qCa" firstAttribute="top" secondItem="QPD-nH-pan" secondAttribute="bottom" constant="12" id="2hX-gx-Ahl"/>
+                                                <constraint firstItem="vSF-Sa-vSE" firstAttribute="top" secondItem="dAK-Rf-qCa" secondAttribute="bottom" constant="12" id="AeU-Kw-JQn"/>
+                                                <constraint firstItem="YVO-Wp-G5y" firstAttribute="leading" secondItem="y4h-Hl-beu" secondAttribute="leadingMargin" constant="8" id="CLX-NM-XGt"/>
+                                                <constraint firstItem="dAK-Rf-qCa" firstAttribute="leading" secondItem="y4h-Hl-beu" secondAttribute="leadingMargin" constant="8" id="Dad-Kg-ECU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kvN-5G-Lit" secondAttribute="trailing" constant="8" id="Smh-Cl-a6f"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QPD-nH-pan" secondAttribute="trailing" constant="8" id="YCd-Rm-5FX"/>
+                                                <constraint firstItem="Gzq-h6-qvJ" firstAttribute="bottom" secondItem="YVO-Wp-G5y" secondAttribute="bottom" id="YGm-QP-HC4"/>
+                                                <constraint firstItem="QPD-nH-pan" firstAttribute="top" secondItem="y4h-Hl-beu" secondAttribute="topMargin" constant="14" id="dG3-gr-LNn"/>
+                                                <constraint firstItem="kvN-5G-Lit" firstAttribute="leading" secondItem="y4h-Hl-beu" secondAttribute="leadingMargin" constant="8" id="dQX-53-mNi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dAK-Rf-qCa" secondAttribute="trailing" constant="8" id="du1-Yn-HlQ"/>
+                                                <constraint firstItem="kvN-5G-Lit" firstAttribute="top" secondItem="vSF-Sa-vSE" secondAttribute="bottom" constant="12" id="fac-T5-FgS"/>
+                                                <constraint firstItem="pAo-jl-uhx" firstAttribute="leading" secondItem="y4h-Hl-beu" secondAttribute="leadingMargin" constant="8" id="fvs-GW-hAg"/>
+                                                <constraint firstItem="QPD-nH-pan" firstAttribute="leading" secondItem="y4h-Hl-beu" secondAttribute="leadingMargin" constant="8" id="gCe-Zg-2dH"/>
+                                                <constraint firstItem="pAo-jl-uhx" firstAttribute="top" secondItem="kvN-5G-Lit" secondAttribute="bottom" constant="12" id="kMf-RI-N0A"/>
+                                                <constraint firstItem="vSF-Sa-vSE" firstAttribute="leading" secondItem="y4h-Hl-beu" secondAttribute="leadingMargin" constant="8" id="lRB-PI-knO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Gzq-h6-qvJ" secondAttribute="trailing" constant="8" id="nWK-53-21N"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vSF-Sa-vSE" secondAttribute="trailing" constant="8" id="odg-Ud-0Bx"/>
+                                                <constraint firstItem="YVO-Wp-G5y" firstAttribute="top" secondItem="pAo-jl-uhx" secondAttribute="bottom" constant="34.5" id="pnf-MW-Hvk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ilb-XH-j92" id="NBV-Qv-LJw"/>
+                            <outlet property="delegate" destination="ilb-XH-j92" id="1bl-dM-RIu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="DỰ BÁO THỜI TIẾT" id="PHK-jl-vVv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGC-0I-MGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="756" y="-55.322338830584712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qRV-4e-Gv9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SpN-7T-k5v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SgA-Bn-bjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ilb-XH-j92" kind="relationship" relationship="rootViewController" id="v61-27-7d9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j37-4m-HoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183.19999999999999" y="-55.322338830584712"/>
         </scene>
     </scenes>
 </document>
