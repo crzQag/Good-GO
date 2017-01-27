@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import UserNotifications
+import SwiftyJSON
 
 class TableViewController: UITableViewController, CLLocationManagerDelegate {
     
@@ -66,7 +67,7 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
                     
                     //TUAN START HERE
                     //Init data got to weatherData (override index weatherData[0]
-                    
+                    //Remember using SwiftyJSON
                     
                     /////////////////////////////////////////////////////////////
                     if !self.weatherData.isEmpty {
