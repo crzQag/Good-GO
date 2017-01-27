@@ -36,7 +36,7 @@ class WeatherData: NSObject, NSCoding {
         */
         
         //Atmosphere
-        static let humidity = "humidity " //(%)
+        static let humidity = "humidity" //(%)
         //static let pressure = "pressure" //Float
         //static let rising = "rising" //Int
         //static let visibility = "visibility" //Float
@@ -51,7 +51,7 @@ class WeatherData: NSObject, NSCoding {
         static let pubDate = "pubDate" //Date
         
         //Condition
-        static let temp = "temp " //Int
+        static let temp = "temp" //Int
         static let text = "text" //String
         
         //Today (index 0 of forecast)

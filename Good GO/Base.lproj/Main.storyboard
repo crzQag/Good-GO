@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SpN-7T-k5v">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,33 +16,33 @@
             <objects>
                 <tableViewController id="ilb-XH-j92" customClass="TableViewController" customModule="Good_GO" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="360" sectionHeaderHeight="18" sectionFooterHeight="18" id="vAF-lv-CXo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Vị Trí" id="RgC-SF-fX0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="Ams-UB-9KP">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ams-UB-9KP" id="rhv-Xc-Q1X">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố: Hà Nội" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDK-v5-w7d">
-                                                    <rect key="frame" x="16" y="12" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="12" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quốc gia: Vietnam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-vG-lMm">
-                                                    <rect key="frame" x="16" y="43" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="43" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vùng: Hanoi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6m-9c-hzL">
-                                                    <rect key="frame" x="16" y="74" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="74" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -66,14 +66,14 @@
                             <tableViewSection headerTitle="Hôm Nay" id="62I-pP-YPX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lrw-du-yKg">
-                                        <rect key="frame" x="0.0" y="219" width="375" height="360"/>
+                                        <rect key="frame" x="0.0" y="218" width="320" height="360"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lrw-du-yKg" id="y4h-Hl-beu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="359"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="359"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPD-nH-pan">
-                                                    <rect key="frame" x="16" y="22" width="343" height="16.5"/>
+                                                    <rect key="frame" x="16" y="22" width="288" height="16.5"/>
                                                     <string key="text">Cập nhật cuối: Fri, 27 Jan 2017 11:00 AM ICT
 </string>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="13"/>
@@ -81,29 +81,29 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiện tại: Mây mù" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-Rf-qCa">
-                                                    <rect key="frame" x="16" y="50" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="50" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Có mưa: Có" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-Sa-vSE">
-                                                    <rect key="frame" x="16" y="81" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="81" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bình mình: 6:35 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvN-5G-Lit">
-                                                    <rect key="frame" x="16" y="112" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="112" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVO-Wp-G5y" customClass="CircularSlider" customModule="CircularSlider">
-                                                    <rect key="frame" x="16" y="197" width="140" height="140"/>
+                                                    <rect key="frame" x="16" y="197" width="130" height="130"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="YVO-Wp-G5y" secondAttribute="height" multiplier="1:1" id="Kh5-fC-7Vs"/>
-                                                        <constraint firstAttribute="width" constant="140" id="kfz-Vm-HZg"/>
+                                                        <constraint firstAttribute="width" constant="130" id="kfz-Vm-HZg"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Độ Ẩm"/>
@@ -119,7 +119,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="radiansOffset">
                                                             <real key="value" value="0.40000000000000002"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="divisa" value=" "/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="divisa" value="%"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="knobRadius">
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
@@ -129,10 +129,10 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzq-h6-qvJ" customClass="CircularSlider" customModule="CircularSlider">
-                                                    <rect key="frame" x="189" y="167" width="170" height="170"/>
+                                                    <rect key="frame" x="154" y="177" width="150" height="150"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="170" id="L1r-bP-jx3"/>
+                                                        <constraint firstAttribute="width" constant="150" id="L1r-bP-jx3"/>
                                                         <constraint firstAttribute="width" secondItem="Gzq-h6-qvJ" secondAttribute="height" multiplier="1:1" id="QxY-1N-Kk6"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -142,7 +142,7 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Nhiệt"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="divisa" value="°C"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="fractionDigits">
-                                                            <integer key="value" value="1"/>
+                                                            <integer key="value" value="0"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                                             <real key="value" value="58"/>
@@ -162,7 +162,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoàng hôn: 5:44 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAo-jl-uhx">
-                                                    <rect key="frame" x="16" y="143" width="343" height="19"/>
+                                                    <rect key="frame" x="16" y="143" width="288" height="19"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -200,6 +200,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="DỰ BÁO THỜI TIẾT" id="PHK-jl-vVv"/>
+                    <connections>
+                        <outlet property="humidSlider" destination="YVO-Wp-G5y" id="nw6-ue-vPS"/>
+                        <outlet property="lblCity" destination="BDK-v5-w7d" id="KLW-3N-6uu"/>
+                        <outlet property="lblCountry" destination="VeH-vG-lMm" id="dVr-m4-LRA"/>
+                        <outlet property="lblPubDate" destination="QPD-nH-pan" id="Xv0-rw-WGs"/>
+                        <outlet property="lblRegion" destination="D6m-9c-hzL" id="usQ-Lk-Ygb"/>
+                        <outlet property="lblSunrise" destination="kvN-5G-Lit" id="k0r-YJ-w4q"/>
+                        <outlet property="lblSunset" destination="pAo-jl-uhx" id="zbV-e0-im3"/>
+                        <outlet property="lblText" destination="dAK-Rf-qCa" id="qkk-pI-Btg"/>
+                        <outlet property="lblWillRain" destination="vSF-Sa-vSE" id="aoL-ZU-XY2"/>
+                        <outlet property="tempSlider" destination="Gzq-h6-qvJ" id="xVZ-2P-x5O"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGC-0I-MGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@
 		405EB18C1E3A675600F2643A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405EB18A1E3A675600F2643A /* LaunchScreen.storyboard */; };
 		405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405EB1941E3A685A00F2643A /* WeatherData.swift */; };
 		407121A71E3B0E090011B6F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407121A61E3B0E090011B6F1 /* TableViewController.swift */; };
+		4092029C1E3B964700D0C175 /* String+INDEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4092029B1E3B964700D0C175 /* String+INDEX.swift */; };
 		40CB11D61E3B5238003F9C03 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CB11D51E3B5238003F9C03 /* Collection+SafeIndex.swift */; };
 		40E62B181E3B243A008955DF /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 40E62B171E3B243A008955DF /* Data.json */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		405EB18D1E3A675600F2643A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		405EB1941E3A685A00F2643A /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		407121A61E3B0E090011B6F1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		4092029B1E3B964700D0C175 /* String+INDEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+INDEX.swift"; sourceTree = "<group>"; };
 		40CB11D51E3B5238003F9C03 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		40E62B171E3B243A008955DF /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		4E7042B0598425FC0AAEBF5D /* Pods_Good_GO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Good_GO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				40CB11D51E3B5238003F9C03 /* Collection+SafeIndex.swift */,
+				4092029B1E3B964700D0C175 /* String+INDEX.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */,
+				4092029C1E3B964700D0C175 /* String+INDEX.swift in Sources */,
 				407121A71E3B0E090011B6F1 /* TableViewController.swift in Sources */,
 				405EB1821E3A675600F2643A /* AppDelegate.swift in Sources */,
 				40CB11D61E3B5238003F9C03 /* Collection+SafeIndex.swift in Sources */,

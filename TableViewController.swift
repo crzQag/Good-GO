@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import UserNotifications
 import SwiftyJSON
+import CircularSlider
 
 class TableViewController: UITableViewController, CLLocationManagerDelegate {
     
@@ -17,8 +18,38 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager() //For location detection
     var userCity: String = ""
     var weatherData = [WeatherData]()
+    
+    var city: String = ""
+    var country: String = ""
+    var region: String = ""
+    
+    var humidity: Int = 0
+
+    var sunrise = Date()
+    var sunset = Date()
+    
+    var pubDate = Date()
+    
+    var temp: Int = 0
+    var text: String = ""
+    
+    var tempHighToday: Int = 58
+    var tempLowToday: Int = 0
+    var textToday: String = ""
 
     //MARK: Outlets
+    @IBOutlet var lblCity: UILabel!
+    @IBOutlet var lblCountry: UILabel!
+    @IBOutlet var lblRegion: UILabel!
+    
+    @IBOutlet var lblPubDate: UILabel!
+    @IBOutlet var lblText: UILabel!
+    @IBOutlet var lblWillRain: UILabel!
+    @IBOutlet var lblSunrise: UILabel!
+    @IBOutlet var lblSunset: UILabel!
+    
+    @IBOutlet var humidSlider: CircularSlider!
+    @IBOutlet var tempSlider: CircularSlider!
     
     //MARK: Defaults
     override func viewDidLoad() {
@@ -58,21 +89,75 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     //Tuan complete this ok? Using JSON
     func getDataFrom(city: String) {
         let query = URL(string: getQueryLink(city: city))
-        //print(query!)
+        print(query!)
         
         let task = URLSession.shared.dataTask(with: query!) { (data, response, error) in
             if error == nil {
                 if let content = data {
+                    let json = JSON(data: content)
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "h:mm aa"
                     /////////////////////////////////////////////////////////////
                     
                     //TUAN START HERE
                     //Init data got to weatherData (override index weatherData[0]
                     //Remember using SwiftyJSON
-                    
+                    if let a = json["query"]["results"]["channel"]["location"]["city"].string {
+                        self.city = a
+                    }
+                    if let country = json["query"]["results"]["channel"]["location"]["country"].string {
+                        self.country = country
+                    }
+                    if let region = json["query"]["results"]["channel"]["location"]["region"].string {
+                        self.region = region
+                    }
+                    /////////////////////////////////////////////////////////////
+                    if let humidity = json["query"]["results"]["channel"]["atmosphere"]["humidity"].string {
+                        self.humidity = Int(humidity)!
+                    }
+                    /////////////////////////////////////////////////////////////
+                    if let sunrise = json["query"]["results"]["channel"]["astronomy"]["sunrise"].string {
+                        let date = dateFormatter.date(from: sunrise)
+                        self.sunrise = date!
+                    }
+                    if let sunset = json["query"]["results"]["channel"]["astronomy"]["sunset"].string {
+                        let date = dateFormatter.date(from: sunset)
+                        self.sunset = date!
+                    }
+                    /////////////////////////////////////////////////////////////
+                    if let pubDate = json["query"]["results"]["channel"]["item"]["pubDate"].string {
+                        let uniqueFormatter = DateFormatter()
+                        uniqueFormatter.dateFormat = "E, d MMM yyyy hh:mm aa zzzz"
+                        
+                        let date = uniqueFormatter.date(from: pubDate.replacingOccurrences(of: "ICT", with: "Indochina Time"))
+                        self.pubDate = date!
+                    }
+                    /////////////////////////////////////////////////////////////
+                    if let temp = json["query"]["results"]["channel"]["item"]["condition"]["temp"].string {
+                        self.temp = self.convertToCelsius(fahrenheit: Int(temp)!)
+                    }
+                    if let text = json["query"]["results"]["channel"]["item"]["condition"]["text"].string {
+                        self.text = text
+                    }
+                    /////////////////////////////////////////////////////////////
+                    if let tempHighToday = json["query"]["results"]["channel"]["item"]["forecast"][0]["high"].string {
+                        self.tempHighToday = self.convertToCelsius(fahrenheit: Int(tempHighToday)!)
+                    }
+                    if let tempLowToday = json["query"]["results"]["channel"]["item"]["forecast"][0]["low"].string {
+                        self.tempLowToday = self.convertToCelsius(fahrenheit: Int(tempLowToday)!)
+                    }
+                    if let textToday = json["query"]["results"]["channel"]["item"]["forecast"][0]["text"].string {
+                        self.textToday = textToday
+                    }
+                    self.initialize()
+                    /////////////////////////////////////////////////////////////
                     /////////////////////////////////////////////////////////////
                     if !self.weatherData.isEmpty {
                         self.saveData()
                     }
+                    
+                    self.updateUI()
                 }
             }
             else {
@@ -89,7 +174,7 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
         
         let query = "\(query_prefix)\(statement.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)\(query_suffix)"
         
-        print(query)
+        //print(query)
         return query
     }
     
@@ -113,6 +198,70 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
             print("Successfully saved.")
         } else {
             print("Failed to save...")
+        }
+    }
+    
+    func convertToCelsius(fahrenheit: Int) -> Int {
+        return Int(5.0 / 9.0 * (Double(fahrenheit) - 32.0))
+    }
+    
+    func initialize() {
+        weatherData.removeAll()
+        weatherData.append(WeatherData(city: city,
+                                       country: country,
+                                       region: region,
+                                       humidity: humidity,
+                                       sunrise: sunrise,
+                                       sunset: sunset,
+                                       pubDate: pubDate,
+                                       temp: temp,
+                                       text: text,
+                                       tempHighToday: tempHighToday,
+                                       tempLowToday: tempLowToday,
+                                       textToday: textToday)!)
+    }
+    
+    func updateUI() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        
+        if let data = weatherData[safe: 0] {
+            DispatchQueue.main.async {
+                self.lblCity.text = "Thành phố: \(data.city!)"
+                self.lblCountry.text = "Quốc gia: \(data.country!)"
+                self.lblRegion.text = "Vùng: \(data.region!)"
+                
+                self.lblPubDate.text = "Cập nhật cuối: \(dateFormatter.string(from: data.pubDate!))"
+                self.lblText.text = "Hiện tại: \(data.text!)"
+                
+                print(data.textToday ?? "No value")
+                if data.textToday?.lowercased() == "rain" || data.textToday?.lowercased() == "showers" {
+                    self.lblWillRain.text = "Có mưa: Có"
+                }
+                else {
+                    self.lblWillRain.text = "Có mưa: Không"
+                }
+                
+                self.lblSunrise.text = "Bình minh: \(dateFormatter.string(from: data.sunrise!)[9...13]) am"
+                self.lblSunset.text = "Hoàng hôn: \(dateFormatter.string(from: data.sunset!)[9...13]) pm"
+                
+                self.humidSlider.setValue(Float(data.humidity!), animated: true)
+                
+                if data.tempHighToday! != 0 {
+                    self.tempSlider.maximumValue = Float(data.tempHighToday!)
+                }
+                if data.tempLowToday! != 0 {
+                    self.tempSlider.minimumValue = Float(data.tempLowToday!)
+                }
+                print(data.temp!)
+                if data.temp! != 0 {
+                    self.tempSlider.setValue(Float(data.temp!), animated: true)
+                }
+            }
+        }
+        else {
+            print("No data")
         }
     }
     
