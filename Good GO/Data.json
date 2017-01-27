@@ -1,0 +1,185 @@
+
+
+
+
+// select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="hanoi, vn")
+
+
+
+
+{
+    "query": {
+        "count": 1,
+        "created": "2017-01-27T06:45:15Z",
+        "lang": "en-US",
+        "diagnostics": {
+            "publiclyCallable": "true",
+            "url": [
+                    {
+                    "execution-start-time": "2",
+                    "execution-stop-time": "5",
+                    "execution-time": "3",
+                    "content": "http://unifiedgeo.geotech.yahoo.com:4080/geo/v1/geocode?q=hanoi%2C%20vn&start=0&size=1&optionalfields=woe.ancestors&minconfidence=0.0001"
+                    },
+                    {
+                    "execution-start-time": "10",
+                    "execution-stop-time": "102",
+                    "execution-time": "92",
+                    "content": "http://weather-ydn-yql.media.yahoo.com:4080/v3/public/weather/rss?w=91888417"
+                    }
+                    ],
+            "javascript": {
+                "execution-start-time": "1",
+                "execution-stop-time": "9",
+                "execution-time": "7",
+                "instructions-used": "16055",
+                "table-name": "geo.places"
+            },
+            "user-time": "104",
+            "service-time": "95",
+            "build-version": "2.0.84"
+        },
+        "results": {
+            "channel": {
+                "units": {
+                    "distance": "mi",
+                    "pressure": "in",
+                    "speed": "mph",
+                    "temperature": "F"
+                },
+                "title": "Yahoo! Weather - Hà Nội, Hanoi, VN",
+                "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-91888417/",
+                "description": "Yahoo! Weather for Hà Nội, Hanoi, VN",
+                "language": "en-us",
+                "lastBuildDate": "Fri, 27 Jan 2017 01:45 PM ICT",
+                "ttl": "60",
+                "location": {
+                    "city": "Hà Nội",
+                    "country": "Vietnam",
+                    "region": " Hanoi"
+                },
+                "wind": {
+                    "chill": "72",
+                    "direction": "110",
+                    "speed": "11"
+                },
+                "atmosphere": {
+                    "humidity": "64",
+                    "pressure": "1020.0",
+                    "rising": "0",
+                    "visibility": "16.1"
+                },
+                "astronomy": {
+                    "sunrise": "6:35 am",
+                    "sunset": "5:44 pm"
+                },
+                "image": {
+                    "title": "Yahoo! Weather",
+                    "width": "142",
+                    "height": "18",
+                    "link": "http://weather.yahoo.com",
+                    "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+                },
+                "item": {
+                    "title": "Conditions for Hà Nội, Hanoi, VN at 01:00 PM ICT",
+                    "lat": "21.017929",
+                    "long": "105.823776",
+                    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-91888417/",
+                    "pubDate": "Fri, 27 Jan 2017 01:00 PM ICT",
+                    "condition": {
+                        "code": "11",
+                        "date": "Fri, 27 Jan 2017 01:00 PM ICT",
+                        "temp": "72",
+                        "text": "Showers"
+                    },
+                    "forecast": [
+                                 {
+                                 "code": "12",
+                                 "date": "27 Jan 2017",
+                                 "day": "Fri",
+                                 "high": "73",
+                                 "low": "62",
+                                 "text": "Rain"
+                                 },
+                                 {
+                                 "code": "30",
+                                 "date": "28 Jan 2017",
+                                 "day": "Sat",
+                                 "high": "76",
+                                 "low": "60",
+                                 "text": "Partly Cloudy"
+                                 },
+                                 {
+                                 "code": "30",
+                                 "date": "29 Jan 2017",
+                                 "day": "Sun",
+                                 "high": "78",
+                                 "low": "61",
+                                 "text": "Partly Cloudy"
+                                 },
+                                 {
+                                 "code": "28",
+                                 "date": "30 Jan 2017",
+                                 "day": "Mon",
+                                 "high": "77",
+                                 "low": "66",
+                                 "text": "Mostly Cloudy"
+                                 },
+                                 {
+                                 "code": "30",
+                                 "date": "31 Jan 2017",
+                                 "day": "Tue",
+                                 "high": "74",
+                                 "low": "66",
+                                 "text": "Partly Cloudy"
+                                 },
+                                 {
+                                 "code": "39",
+                                 "date": "01 Feb 2017",
+                                 "day": "Wed",
+                                 "high": "76",
+                                 "low": "66",
+                                 "text": "Scattered Showers"
+                                 },
+                                 {
+                                 "code": "12",
+                                 "date": "02 Feb 2017",
+                                 "day": "Thu",
+                                 "high": "75",
+                                 "low": "65",
+                                 "text": "Rain"
+                                 },
+                                 {
+                                 "code": "30",
+                                 "date": "03 Feb 2017",
+                                 "day": "Fri",
+                                 "high": "75",
+                                 "low": "63",
+                                 "text": "Partly Cloudy"
+                                 },
+                                 {
+                                 "code": "28",
+                                 "date": "04 Feb 2017",
+                                 "day": "Sat",
+                                 "high": "75",
+                                 "low": "65",
+                                 "text": "Mostly Cloudy"
+                                 },
+                                 {
+                                 "code": "12",
+                                 "date": "05 Feb 2017",
+                                 "day": "Sun",
+                                 "high": "77",
+                                 "low": "67",
+                                 "text": "Rain"
+                                 }
+                                 ],
+                    "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/11.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Showers\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Fri - Rain. High: 73Low: 62\n<BR /> Sat - Partly Cloudy. High: 76Low: 60\n<BR /> Sun - Partly Cloudy. High: 78Low: 61\n<BR /> Mon - Mostly Cloudy. High: 77Low: 66\n<BR /> Tue - Partly Cloudy. High: 74Low: 66\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-91888417/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+                    "guid": {
+                        "isPermaLink": "false"
+                    }
+                }
+            }
+        }
+    }
+}

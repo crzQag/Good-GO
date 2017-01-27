@@ -14,6 +14,7 @@
 		405EB18C1E3A675600F2643A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405EB18A1E3A675600F2643A /* LaunchScreen.storyboard */; };
 		405EB1951E3A685A00F2643A /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405EB1941E3A685A00F2643A /* WeatherData.swift */; };
 		407121A71E3B0E090011B6F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407121A61E3B0E090011B6F1 /* TableViewController.swift */; };
+		40E62B181E3B243A008955DF /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 40E62B171E3B243A008955DF /* Data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		405EB18D1E3A675600F2643A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		405EB1941E3A685A00F2643A /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		407121A61E3B0E090011B6F1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		40E62B171E3B243A008955DF /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		4E7042B0598425FC0AAEBF5D /* Pods_Good_GO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Good_GO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		405EB1801E3A675600F2643A /* Good GO */ = {
 			isa = PBXGroup;
 			children = (
+				40E62B161E3B23E2008955DF /* Example Data */,
 				407121A81E3B0E160011B6F1 /* View Controllers */,
 				405EB1931E3A683800F2643A /* Data Modal */,
 				405EB1811E3A675600F2643A /* AppDelegate.swift */,
@@ -105,6 +108,14 @@
 				407121A61E3B0E090011B6F1 /* TableViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		40E62B161E3B23E2008955DF /* Example Data */ = {
+			isa = PBXGroup;
+			children = (
+				40E62B171E3B243A008955DF /* Data.json */,
+			);
+			name = "Example Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				405EB18C1E3A675600F2643A /* LaunchScreen.storyboard in Resources */,
 				405EB1891E3A675600F2643A /* Assets.xcassets in Resources */,
 				405EB1871E3A675600F2643A /* Main.storyboard in Resources */,
+				40E62B181E3B243A008955DF /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,5 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Để đưa bạn dữ liệu về nơi bạn đang ở.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Để đưa bạn dữ liệu về nơi bạn đang ở.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Để đưa bạn dữ liệu về nơi bạn đang ở.</string>
 </dict>
 </plist>

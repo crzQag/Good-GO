@@ -7,4 +7,5 @@ target 'Good GO' do
 
   # Pods for Good GO
   pod 'CircularSlider'
+  pod 'SwiftyJSON'
 end
